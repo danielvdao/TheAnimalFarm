@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='AnimalFarmCSS.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='kow.png') }}" type="image/x-icon">
+
+	<title> The Animal Farm </title>
+
+	<!-- <div style="background-color:red; width:20px; height:100%; float:right"></div>  -->
+
+	<a href= "{{ url_for ('new_url') }}"><img src="{{ url_for('static', filename='AnimalFarm_3_edit.png')}}" alt="Nice Logo" width = "100%" height = "100%" class = "header"></a>	
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('login') }}" class="login" >Login</a>
+	{% else %}
+		<a href="{{ url_for('logout') }}" class="login">Logout</a>
+	{% endif %}
+
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('signup') }}" class="signup">Signup</a>
+	{% else %}
+		<a href="{{ url_for('new_post') }}" class="signup">New</a>
+	{% endif %}
+	
+
+	<a href="{{ url_for('about') }}" class="about"> About </a>
+	<a href="{{ url_for('new_url') }}"> <img src = "{{ url_for('static', filename='arrow.png')}}" alt = "FFF" class = "arrow"> </a>
+	
+	{% if row %}
+	<h1> {{row[0]}} </h1>
+	<p class={%if pro%}"boxitpro"{%else%}"boxitcon"{%endif%}> 
+		{{row[1]}}
+	</p>
+	{% endif %}
+	{% for i in comments %}
+	<p  class={%if pro%}"boxitpro"{%else%}"boxitcon"{%endif%}>{{i[3]}}</p>
+	{% endfor %}
+
+	
+ 	<h3>Response:</h3>
+ 	<form method="post" action="/comment">
+ 		<textarea rows="4" cols="60" class = "bodyfield"  name = "Response"> </textarea>
+ 		<input type="submit" value="Submit" class = "buttonish">
+ 	</form>
+
+
+
+
+
+</body>
+</html>

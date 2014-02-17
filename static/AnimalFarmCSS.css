@@ -1,0 +1,307 @@
+<style>
+@font-face { font-family: ColaberationRegular; src: url('ColabReg.otf');}
+
+	html
+	{
+
+		background-color: #DCDDD8;
+		margin-left: 150px;
+		margin-right: 150px;
+		margin-bottom: 100px;
+		overflow-x: hidden;
+	}
+
+	h1
+	{
+		font-family: helvetica;
+		font-size: 100;
+		font-style: italic;
+		font-weight: lighter;
+		margin-top: -70px;
+		margin-left: -20px;
+		color: 	#575555;
+	}
+
+	h2
+	{
+		font-family: helvetica;
+		font-size: 24;
+		font-style: italic;
+		font-weight: lighter;
+		margin-top: -20px;
+		color: #575555;
+	}
+
+	h3
+	{
+		font-family: helvetica;
+		font-size: 14;
+		font-weight: bolder;
+		color: #575555;
+	}
+
+
+	input
+	{
+		display: block;
+    	height: 40px;
+  		width: 350px;
+   		background: #303030;
+    	border: 2px solid #303030;
+
+    	color: #dcddd8;
+    	text-align: left;
+	    font: 24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+	}
+
+
+	p
+	{
+		font-family: sans-serif;
+		margin-top: -10px;
+		margin-left: -20px;
+		color: #716f6c;
+	}
+
+	div
+	{
+		margin-top: -10px;
+		border-radius: 10px;
+
+	}
+
+	.boxitpro
+	{
+		display: block;
+    	height: 100%;
+  		width: 100%px;
+  		padding: 10px 10px 10px 10px;
+   		background: #898888;
+    	border: 2px solid #898888;
+
+    	color: #dcddd8;
+    	text-align: left;
+	    font: 15px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+
+	    border-radius: 0px;
+	    /*box-shadow: 0 2px 0 #000000;*/
+	    /*top: 93px;*/
+	    z-index: -999;
+
+	}
+
+	.boxitcon
+	{
+		display: block;
+    	height: auto;
+  		width: auto;
+  		padding: 10px 10px 10px 10px;
+   		background: #5b5a5a;
+    	border: 2px solid #5b5a5a;
+
+    	color: #dcddd8;
+    	text-align: left;
+	    font: 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+
+	    border-radius: 0px;
+	    /*box-shadow: 0 2px 0 #000000;*/
+	    /*top: 93px;*/
+	    z-index: -999;
+
+	}
+
+	.error
+	{
+		margin-top: 20px;
+		font-family: helvetica;
+		font-weight: lighter;
+		font-style: italic;
+		color: red;
+		font-size: 12;
+		text-align: left;
+	}
+
+	.titlefield
+	{
+		display: block;
+    	height: 40px;
+  		width: 900px;
+   		background: #303030;
+    	border: 2px solid #303030;
+
+    	color: #dcddd8;
+    	text-align: left;
+	    font: 25px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+	}
+
+	.bodyfield
+	{
+		display: block;
+    	height: 150px;
+  		width: 900px;
+   		background: #303030;
+    	border: 2px solid #303030;
+
+    	color: #dcddd8;
+    	text-align: left;
+	    font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+	}
+
+	.header
+	{
+		position: static;
+		margin-left: -160px;
+		margin-top: -11px;
+		width: auto;
+		height: auto;
+
+	}
+
+	.arrow
+	{
+		margin-top: 215px;
+		opacity: .2;
+		height: 25%;
+		width: 10%;
+
+	    position: fixed;
+	    right: 0px;
+	    top: 50px;
+	    z-index: -99;
+	}
+
+	.arrow:hover
+	{
+		opacity: .7;
+	}
+
+	.login
+	{
+		display: block;
+    	height: 22px;
+  		width: 75px;
+   		background: transparent;
+    	border: 2px solid transparent;
+
+    	color: #dcddd8;
+    	text-align: center;
+	    font: 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+
+	    border-radius: 0px;
+	    /*box-shadow: 0 2px 0 #000000;*/
+	    position: relative;
+	    left: 950px;
+	    top: -65px;
+	    /*top: 93px;*/
+	    z-index: 999;
+
+	}
+
+	a.login:hover 
+	{
+	    background: #9c6565;
+	    border: 2px solid #9c6565;
+	}
+
+	.signup
+	{
+		display: block;
+    	height: 22px;
+  		width: 75px;
+   		background: transparent;
+    	border: 2px solid transparent;
+
+    	color: #dcddd8;
+    	text-align: center;
+	    font: 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+
+	    border-radius: 0px;
+	    /*box-shadow: 0 2px 0 #000000;*/
+	    position: relative;
+	    left: 1029px;
+	    top: -91px;
+	    z-index: 999;
+	}
+
+	a.signup{}
+
+	a.signup:hover
+	{
+		background: #6d929b;
+	    border: 2px solid #6d929b;
+	}
+
+	.about
+	{
+		display: block;
+    	height: 22px;
+  		width: 75px;
+   		background: transparent;
+    	border: 2px solid transparent;
+
+    	color: #dcddd8;
+    	text-align: center;
+	    font: 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+
+	    border-radius: 0px;
+	    /*box-shadow: 0 2px 0 #000000;*/
+	    position: relative;
+	    left: 1107px;
+	    top: -117px;
+	    z-index: 999;
+	}
+
+	a.about {}
+
+	a.about:hover
+	{
+		background: #83C76E;
+	    border: 2px solid #83C76E;
+	}
+
+	.skip
+	{
+		display: block;
+    	height: 100%;
+  		width: 100px;
+   		background: transparent;
+    	border: 2px solid transparent;
+
+	    border-radius: 0px;
+	    /*box-shadow: 0 2px 0 #000000;*/
+	    position: fixed;
+	    right: 0px;
+	    top: 0px;
+	    z-index: -99;
+	}
+
+	.buttonish
+	{
+		display: block;
+    	height: 40px;
+  		width: 100px;
+   		background: #303030;
+    	border: 2px solid #303030;
+
+    	color: #dcddd8;
+    	text-align: center;
+	    font: 25px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	    text-decoration: none;
+	}
+
+	.buttonish:hover
+	{
+		background: #6d929b;
+	    border: 2px solid #6d929b;
+	}
+
+
+	</style>

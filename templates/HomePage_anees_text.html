@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='AnimalFarmCSS.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='kow.png') }}" type="image/x-icon">
+
+	<title> The Animal Farm </title>
+
+	<!-- <div style="background-color:red; width:20px; height:100%; float:right"></div>  -->
+
+	<img src="{{ url_for('static', filename='AnimalFarm_3_edit.png')}}" alt="Nice Logo" width = "100%" height = "100%" class = "header">
+	
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('login') }}" class="login" >Login</a>
+	{% else %}
+		<a href="{{ url_for('logout') }}" class="login">Logout</a>
+	{% endif %}
+
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('signup') }}" class="signup">Signup</a>
+	{% else %}
+		<a href="{{ url_for('new_post') }}" class="signup">New</a>
+	{% endif %}
+	
+
+	<a href="{{ url_for('about') }}" class="about"> About </a>
+	<a href="#"> <img src = "{{ url_for('static', filename='arrow.png')}}" alt = "FFF" class = "arrow"> </a>
+	
+	{% if debug %}<h1 style="color:red;"> DEBUG MODE </h1> {% endif %}
+	<h1> Do natural rights exist? Is the right to armed self defense among them? A question brought to you by Mohammad Anees.</h1>
+	<p class = "boxitpro"> 
+		I was raised in the Enlightenment tradition of natural rights as promoted by the Founding Fathers. As a consequence I am deeply invested in the concept of natural rights. It strikes me that men are born with certain rights, and among these are the right to live unmolested by his fellow man, to live as he chooses so long as he does not harm his neighbor in any significant, quantifiable way, and to control his own body and all the products and materials thereof.
+		From these principles, I conclude that (barring a violation of the harm principle) that men should not be able to control the lives of their neighbors, no matter how popular those restrictions are. I also conclude that men have a right to defend themselves from attack by their neighbors, even by deadly force. Lastly, I conclude that men should be permitted access to all sort of terrible weapons in order to effect this defense against their fellow man.
+		Unfortunately for me, many of my fellow citizens do not seem to believe these principles as I believe. They hold that an infringement on the life of their neighbor is justified provided the restriction has majority support by the community, and that men should not be permitted to own dangerous weapons for self defense. Some even believe that there is no right to self defense.
+		From whence does this disagreement flow? Are we simply separated by the principles
+	</p>
+	<p  class = "boxitcon">
+		If we start from a nondualist standpoint[1] , can we still reach a point where morality is said to be something greater than just personal opinion (for example, murder being wrong for reasons other than "I personally think it's bad")?
+		Dualists can say that a person is a distinct thing, and thus killing a person is wrong because that distinct thing has some kind of inherent value. That's a bit of a bold claim to make, but it's not contradictory.
+		Is it contradictory for a nondualist to say that an individual thing, such as a person, has some kind of value intrinsic in itself despite just being a bunch of stuff which we decide to think of as an individual thing?		
+	</p>
+
+	<p class = "boxitpro">
+
+		I'm saying there are no such things as natural rights. Why should there be? Natural rights are a construction of an earth with billions of humans on it that all more or less want to coexist without fear of being murdered or raped or what have you. They're agreed upon by most (but not all) people, and don't exist separately from that reality.
+		In a different time, yes, whatever you were physically able to accomplish without someone physically stopping you would have been your natural right. Consider the social dynamics of most primates and you'll see why this is likely. This baboon study[1] illustrates one possibility for how the necessity for peaceful coexistence arose out of the alpha-male group dynamic.
+
+	</p>
+
+	<p class = "boxitcon">
+		Interestingly, some Tantric Buddhists actually take deep, serious vows to break any of the traditional moral precepts in situations where that is seen to be required. This makes a mess out of morality, rightly — how could morality ever really be simple?
+		In Zen, too, moral precepts are seen both as almost sacred expressions of the activity of the awakened mind — and as limited, fragmentary, training wheels. To break the precepts should not be taken lightly, because we need these training wheels. But to cling to any literal interpretation of them is also to separate yourself from reality.
+		Zen talks about how the awakened mind does not separate right from wrong, small from big, "a moment is a thousand years," etc. Yet awakening carries with it a great compassion that goes beyond bones-deep.
+		This is sounding very mystical, so to put it more plainly, I think a non-dualistic approach to morality will focus less on ethical reasoning, clear rules, and talk about values — but give a lot of emphasis to things like the lived experience of witnessing pain and wanting to soothe it regardless of who is hurt, or the actual feelings of liking the world and wishing positive things for it, and how to practice the mind in such a way that these basically "natural" mental qualities can come out and be recognized and expressed.
+		Here's someone who can explain it without making a mess...
+ 	</p>
+
+ 	<h3>Response:</h3>
+ 	<form method="post" action="/comment">
+ 		<textarea rows="4" cols="60" class = "bodyfield"  name = "Response"> </textarea>
+ 		<input type="submit" value="Submit" class = "buttonish">
+ 	</form>
+
+
+
+
+
+</body>
+</html>

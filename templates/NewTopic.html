@@ -1,0 +1,35 @@
+<html>
+<body>
+		<title>New Topic</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='AnimalFarmCSS.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='kow.png') }}" type="image/x-icon">
+
+
+
+	<a href= "{{ url_for ('new_url') }}"><img src="{{ url_for('static', filename='AnimalFarm_3_edit.png')}}" alt="Nice Logo" width = "100%" height = "100%" class = "header"></a>	
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('login') }}" class="login" >Login</a>
+	{% else %}
+		<a href="{{ url_for('logout') }}" class="login">Logout</a>
+	{% endif %}
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('signup') }}" class="signup">Signup</a>
+	{% else %}
+		<a href="{{ url_for('new_post') }}" class="signup">New</a>
+	{% endif %}
+	<a href="{{ url_for('about') }}" class="about"> About </a>
+	
+		<h2>Starting a new topic:</h2>
+		<form method="post" action="{{ url_for('new_post') }}">
+			<h3>Title: 
+				<input type="text" name="Title" value="" class = "titlefield">
+			</h3>
+			<h3>Body:
+				<textarea rows="4" cols="50" class = "bodyfield"  name = "Body"> </textarea>
+			</h3>
+			<input type="submit" value="Submit" class = "buttonish">
+			{%if error%}<p class = "error"> {{error}} </p> {%endif%}
+		</form>
+
+</body>
+</html>

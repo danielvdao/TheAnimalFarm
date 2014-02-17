@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='AnimalFarmCSS.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='kow.png') }}" type="image/x-icon">
+
+	<a href= "{{ url_for ('new_url') }}"><img src="{{ url_for('static', filename='AnimalFarm_3_edit.png')}}" alt="Nice Logo" width = "100%" height = "100%" class = "header"></a>
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('login') }}" class="login" >Login</a>
+	{% else %}
+		<a href="{{ url_for('logout') }}" class="login">Logout</a>
+	{% endif %}
+	{% if not session.get('logged_in') %}
+		<a href="{{ url_for('signup') }}" class="signup">Signup</a>
+	{% else %}
+		<a href="{{ url_for('new_post') }}" class="signup">New</a>
+	{% endif %}
+	<a href="{{ url_for('about') }}" class="about"> About </a>
+
+	<title> About </title>
+	<h2>About The Animal Farm: </h2>
+	<p> The animal farm is really just a website to debate on with complete anonymonity and of the topics of your choice. If the topic
+		doesn't exist, then feel free to start your own. But first you'll need a login! Don't worry we don't take any email information all we need
+		is a username and a password. However, the name that you will post under in public forums will be randomly generated for each debate thread you partake in.
+	</p>
+	<p class = "boxitpro"> The people that agree with the side or are proponents for the side being disgused show up like this </p>
+	<p class = "boxitcon"> And the people that disagree with the side show up like this in the forums </p>
+	<p> Use the big red arrow on the right side of the homescreen to skip or change through the current topics </p>
+	<p>
+		This website was designed and built by Daniel Dao, Mohammad Anees, Sean Wyse, and Walid Owais. We stayed up 24 hrs without any sleep putting this
+		shit together. Hope you enjoyed it. 
+	</p>
+
+
+
+
+</body>
+</html>
